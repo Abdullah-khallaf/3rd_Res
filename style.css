@@ -1,0 +1,16 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Cairo", sans-serif;
+}
+/* Additional RTL adjustments */
+body {
+     text-align: right; 
+    }
+.form-group label { float: right; }
+.btn-submit { float: right; }
+
+.card-header{
+    text-align: right;
+}
