@@ -1,5 +1,5 @@
 document.getElementById('resultForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault();
 
     var form = document.getElementById('resultForm');
     var formData = new FormData(form);
@@ -10,17 +10,17 @@ document.getElementById('resultForm').addEventListener('submit', function(event)
     })
     .then(response => response.json())
     .then(data => {
-      // Update UI with fetched data
+      
       document.getElementById('result_name').textContent = data.name;
       document.getElementById('result_place_number').textContent = data.place_number;
       document.getElementById('result_score').textContent = data.score;
       document.getElementById('result_status').textContent = data.status;
 
-      // Show the result section
+      
       document.getElementById('resultSection').style.display = 'block';
     })
     .catch(error => {
       console.error('Error:', error);
-      // Handle error scenario
+      
     });
   });
